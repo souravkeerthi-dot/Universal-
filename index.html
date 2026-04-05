@@ -8,11 +8,10 @@
 <style>
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: Arial, sans-serif;
   background: linear-gradient(to bottom, #ff7e5f, #feb47b);
   color: white;
   text-align: center;
-  overflow-x: hidden;
 }
 
 .container {
@@ -20,61 +19,33 @@ body {
 }
 
 h1 {
-  font-size: 2.8em;
-  animation: fadeIn 1s ease-in-out;
-}
-
-p {
-  font-size: 1.2em;
-  margin: 10px 0;
+  font-size: 2.5em;
 }
 
 img {
-  width: 280px;
-  border-radius: 20px;
-  margin: 15px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-  animation: float 3s infinite ease-in-out;
-}
-
-.buttons {
-  margin-top: 30px;
+  width: 260px;
+  border-radius: 15px;
+  margin: 10px;
 }
 
 button {
-  padding: 15px 30px;
+  padding: 15px 25px;
   margin: 10px;
   font-size: 16px;
   border: none;
-  border-radius: 12px;
+  border-radius: 10px;
   cursor: pointer;
-  transition: 0.3s;
 }
 
 .yes {
-  background: #4CAF50;
+  background: green;
   color: white;
-}
-
-.yes:hover {
-  transform: scale(1.1);
 }
 
 .no {
-  background: #ff4d4d;
+  background: red;
   color: white;
   position: absolute;
-}
-
-@keyframes fadeIn {
-  from {opacity: 0; transform: translateY(20px);}
-  to {opacity: 1; transform: translateY(0);}
-}
-
-@keyframes float {
-  0% {transform: translateY(0);}
-  50% {transform: translateY(-10px);}
-  100% {transform: translateY(0);}
 }
 </style>
 </head>
@@ -83,31 +54,23 @@ button {
 
 <div class="container">
   <h1>Hey 👀</h1>
-  <p>I had a slightly dangerous idea...</p>
-  <p><strong>You 🤝 Me 🤝 Universal Studios 🎢</strong></p>
-  <p>Rides, chaos, snacks, and me pretending I’m not scared 😌</p>
+  <p>I have a plan...</p>
+  <p><strong>You + Me + Universal Studios 🎢</strong></p>
+  <p>Rides, food, and me acting brave 😌</p>
 
-  <!-- Images -->
-  <img src="https://images.unsplash.com/photo-1601924582975-7f5b6f3bb6fa" />
-  <img src="https://images.unsplash.com/photo-1581322337649-3a4d7f1c6a89" />
+  <!-- WORKING IMAGES -->
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Universal_Studios_Hollywood.jpg">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Roller_coaster.jpg">
 
-  <p>So… what do you say?</p>
+  <p>So… are you in?</p>
 
-  <div class="buttons">
-    <button class="yes" onclick="yesClicked()">Yes 😄</button>
-    <button class="no" id="noBtn" onmouseover="moveButton()">No 🙃</button>
-  </div>
+  <button class="yes" onclick="yesClicked()">Yes 😄</button>
+  <button class="no" id="noBtn" onmouseover="moveButton()">No 🙃</button>
 </div>
 
 <script>
 function yesClicked() {
-  document.body.innerHTML = `
-    <div style="padding-top:100px; text-align:center; color:white;">
-      <h1>Perfect 😌</h1>
-      <p>I knew you had good taste.</p>
-      <p>I’ll text you the plan 🎢</p>
-    </div>
-  `;
+  document.body.innerHTML = "<h1 style='margin-top:100px;'>Perfect 😌 I’ll text you the details.</h1>";
 }
 
 function moveButton() {
